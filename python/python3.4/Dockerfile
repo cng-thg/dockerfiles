@@ -13,10 +13,10 @@ MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 ## Your settings go here:
 
 ## Update repos and install packages
-RUN apt-get -qq update && apt-get install --no-install-recommends -qqy \
-                                python3 \
-                                python3-dev \
-                                python3-doc
+RUN apt-get -qq update && apt-get install --no-install-recommends -y \
+  python3 \
+  python3-dev \
+  python3-doc
 
 ## install "pip" from pypa
 RUN curl -SL 'https://bootstrap.pypa.io/get-pip.py' | python
