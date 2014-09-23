@@ -59,11 +59,10 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 # RUN sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list
 
 ## Update repos and upgrade system
-RUN apt-get -qq update
-RUN apt-get -qqy upgrade
+RUN apt-get -qq update && apt-get -y upgrade \
 
 ## Install English language and set Locale
-RUN apt-get -qqy install language-pack-en
+RUN apt-get -y install language-pack-en
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
