@@ -11,28 +11,27 @@ FROM yesops/base
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 
 ## Update repos and install packages
-RUN apt-get -qq update && apt-get install --no-install-recommends -qqy \
+RUN apt-get -qq update && apt-get install --no-install-recommends -y \
                                 autoconf \
                                 build-essential \
                                 imagemagick \
                                 libbz2-dev \
-                                libcurl4-openssl-dev \
-                                libevent-dev \
+                                #libcurl4-openssl-dev \
+                                #libevent-dev \
                                 libffi-dev \
-                                libglib2.0-dev \
+                                #libglib2.0-dev \
                                 libjpeg-dev \
                                 libmagickcore-dev \
                                 libmagickwand-dev \
-                                libmysqlclient-dev \
+                                #libmysqlclient-dev \
                                 libncurses-dev
-                                libpq-dev \
+                                #libpq-dev \
                                 libreadline-dev \
                                 libssl-dev \
                                 libxml2-dev \
                                 libxslt-dev \
                                 libyaml-dev \
-                                zlib1g-dev \
-
-
-
-
+                                zlib1g-dev
+                                libfreetype6-dev\ 
+                                liblcms2-dev \ 
+                                libwebp-dev 
