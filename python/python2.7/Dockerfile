@@ -5,7 +5,7 @@
 
 
 ## Set the base image to Ubuntu
-FROM yesops/base
+FROM yesops/vcs
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
@@ -14,10 +14,12 @@ MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 
 ## Update repos and install packages
 RUN apt-get -qq update && apt-get install --no-install-recommends -qqy \
-                                python
-                                python-dev
+                                python \
+                                python-dev \
                                 python-doc
 
+## install "pip" from pypa
+RUN curl -SL 'https://bootstrap.pypa.io/get-pip.py' | python
 
 ## Install virtualenv
 RUN pip install virtualenv
