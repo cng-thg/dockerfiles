@@ -19,7 +19,7 @@ RUN apt-get -qq update && apt-get install --no-install-recommends -y \
   python-doc
 
 ## install "pip" from pypa
-RUN curl -SL 'https://bootstrap.pypa.io/get-pip.py' | python
+RUN curl -SLk 'https://bootstrap.pypa.io/get-pip.py' | python
 
 ## Install virtualenv
 RUN pip install virtualenv
