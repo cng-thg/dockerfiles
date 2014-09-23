@@ -5,7 +5,7 @@
 
 
 ## Set the base image to Ubuntu
-FROM yesops/vcs
+FROM yesops/git
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
