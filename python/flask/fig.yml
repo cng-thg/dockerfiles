@@ -1,0 +1,8 @@
+flask:
+  image: yesops/flask
+  volumes:
+    - .:/app
+  working_dir: /app
+  ports:
+    - "5000:5000"
+  command: python manage.py runserver -p "5000" -h "0.0.0.0"
