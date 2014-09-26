@@ -1,2 +1,5 @@
 serf:
   image: yesops/serf
+  ports:
+    - "7946:7946"
+    - "7373:7373"

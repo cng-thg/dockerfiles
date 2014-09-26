@@ -22,6 +22,9 @@ RUN unzip 0.6.3_linux_amd64.zip && \
   rm 0.6.3_linux_amd64.zip && \
   mv serf /usr/bin
 
+## Setting up Serf
+ENV SERF_ROLE serf
+
 ## Setting up supervisor
 ADD serf.conf /etc/supervisor/conf.d/serf.conf
 ADD serf.sh /opt/serf.sh
