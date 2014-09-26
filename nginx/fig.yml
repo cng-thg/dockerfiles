@@ -1,0 +1,4 @@
+nginx:
+  image: yesops/nginx
+  ports:
+    - "8080:80"
