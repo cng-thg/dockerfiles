@@ -29,8 +29,10 @@ RUN apt-get install --no-install-recommends -y \
   libpq-dev \
   libsqlite3-dev
                                 
-## Imaging dependencies
-#RUN apt-get install --no-install-recommends -y \
+## Other dependencies
+RUN apt-get install --no-install-recommends -y \
+  libxml2-dev \
+  libxslt-dev
 #  imagemagick \
 #  libjpeg-dev \
 #  libtiff5-dev
@@ -39,8 +41,6 @@ RUN apt-get install --no-install-recommends -y \
 # liblcms2-dev \                              
 #  libwebp-dev 
 #  libfreetype6-dev \ 
-#  libxml2-dev \
-#  libxslt-dev \
 #libglib2.0-dev \
 #libcurl4-openssl-dev \
 #libevent-dev \
