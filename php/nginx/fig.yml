@@ -1,0 +1,4 @@
+php5:
+  image: yesops/php5-nginx
+  ports:
+    - "8080:80"
