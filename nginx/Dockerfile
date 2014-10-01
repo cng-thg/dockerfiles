@@ -25,18 +25,15 @@ RUN apt-get -qq update && apt-get install --no-install-recommends -y \
 ENV SERF_ROLE web
 
 ## Setting up supervisor
-ADD nginx.conf /etc/supervisor/conf.d/nginx.conf
+ADD nginx-supervisor.conf /etc/supervisor/conf.d/nginx.conf
 
 ## Setting up nginx
-RUN cp -R /etc/nginx /etc/nginx.default
-ADD nginx /etc/nginx
+ADD nginx.conf /etc/nginx/nginx.conf
 ADD nginx.sh /opt/nginx.sh
 RUN chmod +755 /opt/nginx.sh
-# tell Nginx to stay foregrounded
-#UN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 ## Define mountable directories.
-VOLUME ["/etc/nginx", "/var/log/nginx"]
+VOLUME ["/var/log/nginx"]
 
 ## Expose ports 
 EXPOSE 80 443
