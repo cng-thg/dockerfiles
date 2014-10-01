@@ -1,0 +1,8 @@
+wp:
+  image: yesops/wordpress
+  ports:
+    - "8080:80"
+  environment:
+    DB_USER: "wp"
+    DB_PASSWORD: "thi2003"
+    DB_NAME: "wordpres"
