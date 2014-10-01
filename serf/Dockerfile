@@ -24,14 +24,17 @@ RUN unzip 0.6.3_linux_amd64.zip && \
 
 ## Setting up Serf
 ENV SERF_ROLE serf
+ADD serf.sh /opt/serf.sh
+RUN chmod +755 /opt/serf.sh
 
 ## Setting up supervisor
 ADD serf.conf /etc/supervisor/conf.d/serf.conf
-ADD serf.sh /opt/serf.sh
-RUN chmod +755 /opt/serf.sh
+
+## Define mountable directories.
+VOLUME ["/var/log/supervisor"]
 
 ## Expose ports
 EXPOSE 7946 7373
 
 ## Run supervisor
-CMD ["supervisord", "-n"]
+CMD ["supervisord", "-n" , "-c", "/etc/supervisor/supervisord.conf"]

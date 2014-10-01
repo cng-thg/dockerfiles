@@ -38,7 +38,7 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/$PG_VERSION/main/p
 RUN echo "listen_addresses='*'" >> /etc/postgresql/$PG_VERSION/main/postgresql.conf
 
 ## Add VOLUMEs to allow backup of config, logs and databases
-VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
+VOLUME  ["/var/log/postgresql", "/var/lib/postgresql"]
 
 ## Expose the PostgreSQL port
 EXPOSE 5432
