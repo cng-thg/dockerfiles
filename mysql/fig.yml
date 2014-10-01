@@ -1,0 +1,6 @@
+mysql:
+  build: .
+  ports:
+    - "3306:3306"
+  environment:
+    PASSWORD: thi2003
