@@ -3,4 +3,4 @@ mysql:
   ports:
     - "3306:3306"
   environment:
-    PASSWORD: thi2003
+    MYSQL_ADMIN_PASSWD: admin
