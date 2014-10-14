@@ -35,16 +35,25 @@ ADD mysql.conf /etc/supervisor/conf.d/mysql.conf
 ## Add MySQL configuration
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 ADD mysqld_charset.cnf /etc/mysql/conf.d/mysqld_charset.cnf
+## Add MySQL scripts
+# Admin creation
 ADD mysql_create_admin.sh /opt/mysql_create_admin.sh
 RUN chmod +775 /opt/mysql_create_admin.sh
+# User creation
+#ADD mysql_create_user.sh /opt/mysql_create_user.sh
+#RUN chmod +775 /opt/mysql_create_user.sh
+# DB creation
+ADD mysql_create_db.sh /opt/mysql_create_db.sh
+RUN chmod +775 /opt/mysql_create_db.sh
+# Service start
 ADD mysql.sh /opt/mysql.sh
 RUN chmod +755 /opt/mysql.sh
 
 ## Add VOLUMEs to allow backup of config and databases
-VOLUME  ["/var/lib/mysql"]
+VOLUME  ["/var/lib/mysql", "/var/log/mysql"]
 
 ## Expose MySQL port
 EXPOSE 3306
 
 ## Run supervisor
-CMD ["supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/opt/mysql.sh"]
