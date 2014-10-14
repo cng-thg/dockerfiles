@@ -5,4 +5,4 @@ wp:
   environment:
     DB_USER: "wp"
     DB_PASSWORD: "thi2003"
-    DB_NAME: "wordpres"
+    DB_NAME: "wp"
