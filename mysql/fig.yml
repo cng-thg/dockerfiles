@@ -3,4 +3,8 @@ mysql:
   ports:
     - "3306:3306"
   environment:
+    MYSQL_ADMIN_USER: admin
     MYSQL_ADMIN_PASSWD: admin
+    MYSQL_USER: user
+    MYSQL_USER_PASSWD: user
+    MYSQL_DB_NAME: docker
