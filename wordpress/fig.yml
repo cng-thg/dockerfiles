@@ -1,8 +1,8 @@
 wp:
-  image: yesops/wordpress
+  build: .
   ports:
     - "8080:80"
   environment:
-    DB_USER: "wp"
-    DB_PASSWORD: "thi2003"
-    DB_NAME: "wp"
+    DB_USER: user
+    DB_PASSWORD: user
+    DB_NAME: docker

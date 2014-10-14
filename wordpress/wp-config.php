@@ -22,7 +22,7 @@ define('DB_NAME', 'wordpress');
 define('DB_USER', 'wordpress');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'wordpress');
 
 /** MySQL hostname */
 define('DB_HOST', exec("/usr/bin/serf members -tag role=mysql | awk {'print $2'} | cut -d':' -f1"));
