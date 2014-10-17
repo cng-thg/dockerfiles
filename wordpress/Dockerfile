@@ -33,7 +33,7 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/
 
 ## Add VOLUMEs to allow persistency of changes
-VOLUME  ["/srv/www"]
+VOLUME  ["/srv/www/wordpress/wp-content"]
 
 ## Expose ports
 EXPOSE 80 443
