@@ -1,0 +1,6 @@
+base:
+  build: .
+  volumes:
+    - .:/docker
+  environment:
+    LOCALE: pt_BR.UTF-8
