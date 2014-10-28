@@ -1,4 +1,0 @@
-base:
-  image: yesops/base
-  volumes:
-    - .:/docker
