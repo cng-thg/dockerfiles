@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/ruby2.1
+IMAGE := yesops/ruby:2.1
 
 all: build
 
