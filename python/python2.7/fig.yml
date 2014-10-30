@@ -1,2 +1,2 @@
 python:
-  build: . 
+  image: yesops/python:2.7
