@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/nodejs
+IMAGE := yesops/nodejs:trusty
 
 all: build
 
