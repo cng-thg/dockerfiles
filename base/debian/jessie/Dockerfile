@@ -64,7 +64,7 @@ ENV LOCALE en_US.UTF-8
 
 RUN apt-get -y install --no-install-recommends \
     locales && \
-    sed -i 's/# $LOCALE/  $LOCALE/' /etc/locale.gen && \
+    sed -i "s/# ${LOCALE}/  ${LOCALE}/" /etc/locale.gen && \
     locale-gen
 
 ## Set Locale
