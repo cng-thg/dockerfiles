@@ -1,11 +1,11 @@
 #############################################################################
-# Dockerfile to build a Flask image 
-# Based on yesops/python2.7 image                                         
+# Dockerfile to build a Flask image
+# Based on yesops/python2.7 image
 #############################################################################
 
 
 ## Set the base image
-FROM yesops/python2.7
+FROM yesops/python:2.7
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
