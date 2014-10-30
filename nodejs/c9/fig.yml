@@ -1,0 +1,8 @@
+c9:
+  build: .
+  volumes:
+    - .:/code
+  ports:
+    - "3131:3131"
+  environment:
+    FOLDER: /code
