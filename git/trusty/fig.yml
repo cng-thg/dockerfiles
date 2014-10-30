@@ -1,0 +1,2 @@
+vcs:
+  image: yesops/git:trusty
