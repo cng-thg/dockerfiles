@@ -1,6 +1,3 @@
-base:
-  build: .
+  image: yesops/debian:jessie
   volumes:
     - .:/docker
-#  environment:
-#    LOCALE: pt_BR.UTF-8
