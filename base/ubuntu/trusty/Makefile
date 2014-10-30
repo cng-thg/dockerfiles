@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/base
+IMAGE := yesops/base:minimalu
 
 
 all: build

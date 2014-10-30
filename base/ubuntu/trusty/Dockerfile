@@ -5,7 +5,7 @@
 
 
 ## Set the base image to Ubuntu
-FROM ubuntu:trusty
+FROM ubuntu-debootstrap:trusty
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
@@ -59,8 +59,8 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 # RUN sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list
 
 ## Update repos and upgrade system
-RUN apt-get -qq update && \
-    apt-get -y upgrade
+RUN apt-get -qq update \
+    && apt-get -y upgrade
 
 ## Install and define locales
 ENV LOCALE en_US.UTF-8
