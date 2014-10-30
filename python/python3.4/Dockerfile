@@ -5,7 +5,7 @@
 
 
 ## Set the base image to Ubuntu
-FROM yesops/git:ubuntu
+FROM yesops/git:trusty
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
