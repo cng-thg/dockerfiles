@@ -20,3 +20,12 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     && echo 'deb https://deb.nodesource.com/node trusty main' > /etc/apt/sources.list.d/nodesource.list \
     && apt-get update \
     && apt-get install --no-install-recommends -y nodejs
+
+## Install compiler and utilities to build npm native modules
+RUN apt-get install --no-install-recommends -y \
+    build-essential \
+    file \
+    nasm \
+    autoconf \
+    automake \
+    gettext
