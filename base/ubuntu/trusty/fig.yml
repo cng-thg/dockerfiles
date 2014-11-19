@@ -1,4 +1,4 @@
 base:
-  image: yesops/base
+  image: yesops/ubuntu:trusty
   volumes:
     - .:/docker

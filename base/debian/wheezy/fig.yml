@@ -1,6 +1,3 @@
-base:
-  build: .
-  volumes:
-    - .:/docker
-  environment:
-    LOCALE: pt_BR.UTF-8
+image: yesops/debian:wheezy
+volumes:
+  - .:/docker

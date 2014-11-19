@@ -1,5 +1,6 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/gulpjs:trusty
+IMAGE := yesops/git:trusty
+
 
 all: build
 

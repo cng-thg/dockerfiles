@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/python2.7
+IMAGE := yesops/python:2.7
 
 all: build
 
 build:
-	sudo docker build -t $(IMAGE) .
+	docker build -t $(IMAGE) .

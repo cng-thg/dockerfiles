@@ -1,11 +1,11 @@
 #############################################################################
-# Dockerfile to build python 3.4 image 
-# Based on yesops/base image                                         
+# Dockerfile to build python 3.4 image
+# Based on yesops/base image
 #############################################################################
 
 
 ## Set the base image to Ubuntu
-FROM yesops/git
+FROM yesops/git:trusty
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>

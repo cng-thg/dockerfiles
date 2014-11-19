@@ -5,18 +5,23 @@
 
 
 ## Set the base image yesops/git
-FROM yesops/git
+FROM yesops/nodejs
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 
 ## Your settings go here:
 
-## Update repos and install packages
-## Adding Chris Lea PPA and Update repos
-RUN apt-get install --no-install-recommends -qqy software-properties-common
-RUN add-apt-repository -y ppa:chris-lea/node.js
-RUN apt-get update
+## Install Cloud9
+RUN git clone https://github.com/ajaxorg/cloud9.git && \
+    cd cloud9 && \
+    npm install
 
-## Install nodejs
-RUN apt-get install --no-install-recommends -qqy nodejs
+## Export C9 port
+EXPOSE 3131
+
+## Working dir
+WORKDIR /cloud9
+
+## Run C9
+CMD bin/cloud9.sh -l 0.0.0.0 -w ${FOLDER:-"/code"} 

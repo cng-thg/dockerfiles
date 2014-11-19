@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/gulpjs:trusty
+IMAGE := yesops/c9
 
 all: build
 

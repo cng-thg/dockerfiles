@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/nodejs
+IMAGE := yesops/python:3.4
 
 all: build
 

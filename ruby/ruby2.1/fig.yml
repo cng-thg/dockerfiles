@@ -1,2 +1,2 @@
 ruby:
-  build: .
+  image: yesops/ruby:2.1
