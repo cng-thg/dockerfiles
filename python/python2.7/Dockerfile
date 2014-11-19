@@ -13,7 +13,7 @@ MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 ## Your settings go here:
 
 ## Update repos and install packages
-RUN apt-get -qq update && apt-get install --no-install-recommends -y \
+RUN apt-get -qq update && apt-get install -y \
   python \
   python-dev \
   python-doc
