@@ -1,0 +1,2 @@
+grunt:
+  image: yesops/gruntjs:trusty
