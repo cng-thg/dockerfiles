@@ -13,4 +13,4 @@ MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
 ## Your settings go here:
 
 ## Install gulpjs globally:
-RUN npm i -g grunt
+RUN npm i -g grunt-cli
