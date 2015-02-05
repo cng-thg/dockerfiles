@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/python:3.4
+IMAGE := yesops/python:3.4.0
 
 all: build
 
