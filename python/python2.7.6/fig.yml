@@ -1,0 +1,2 @@
+python:
+  image: yesops/python:2.7.6
