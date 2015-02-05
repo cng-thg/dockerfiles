@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/base:minimalu
+IMAGE := yesops/ubuntu:14.04
 
 
 all: build

@@ -1,4 +1,5 @@
-base:
-  image: yesops/ubuntu:trusty
+ubuntu:
+  image: yesops/ubuntu:14.04
   volumes:
     - .:/docker
+    - /etc/localtime:/etc/localtime:ro
