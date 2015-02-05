@@ -62,6 +62,9 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 RUN apt-get -qq update \
     && apt-get -y upgrade
 
+## Add sudo
+RUN apt-get install -y sudo
+
 ## Install and define locales
 ENV LOCALE en_US.UTF-8
 
