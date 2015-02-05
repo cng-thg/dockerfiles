@@ -18,5 +18,10 @@ RUN apt-get -qq update && apt-get install -y \
   python2.7-dev=2.7.6-8 \
   curl
 
+  ## Make some useful symlinks that are expected to exist
+  RUN cd /usr/bin \
+  && ln -s python2.7 python2 \
+  && ln -s python2.7 python
+
 ## install "pip" from pypa or Ubuntu repository
 RUN curl -SLk 'https://bootstrap.pypa.io/get-pip.py' | python2.7
