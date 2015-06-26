@@ -1,8 +1,9 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/ubuntu:14.04
 
+VERSION = trusty
+IMAGE = yesops/ubuntu
 
 all: build
 
 build:
-	docker build -t $(IMAGE) .
+	docker build -t $(IMAGE):$(VERSION) .

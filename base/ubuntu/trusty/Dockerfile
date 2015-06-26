@@ -1,14 +1,17 @@
 #############################################################################
-# Dockerfile to build base container image                                  #
-# Based on Ubuntu                                                           #
+# Dockerfile to build micro images from scratch 
+# Based on a custom Ubuntu debootstrap
 #############################################################################
 
 
-## Set the base image to Ubuntu
-FROM ubuntu-debootstrap:trusty
+## Set the base image to scratch
+FROM scratch
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
+
+## Add rootfs
+ADD rootfs.tar.xz /
 
 ## Set environment variables
 
@@ -51,27 +54,6 @@ RUN echo '#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d && \
 ## Prevent APT from make a cache
 RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 
-
-# Preparing the path
-############################################################################
-
-## Enable Ubuntu Multiverse.
-# RUN sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list
-
 ## Update repos and upgrade system
 RUN apt-get -qq update \
     && apt-get -y upgrade
-
-## Add sudo
-RUN apt-get install -y sudo
-
-## Install and define locales
-ENV LOCALE en_US.UTF-8
-
-## Generate locales
-RUN locale-gen $LOCALE
-
-## Set Locale
-ENV LANG $LOCALE
-ENV LANGUAGE $LOCALE
-ENV LC_ALL $LOCALE
