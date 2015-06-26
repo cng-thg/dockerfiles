@@ -43,11 +43,11 @@ debootstrap --variant=minbase $RELEASE $ROOTFS
 ## Cleaning unnecessary packages
 echo "Cleanning rootfs"
 
-chroot $ROOTFS /bin/bash -x <<'EOF' 
-  dpkg --clear-selections
-  echo apt install |dpkg --set-selections
+chroot $ROOTFS /bin/bash -x <<'EOF'
   SUDO_FORCE_REMOVE=yes 
   DEBIAN_FRONTEND=noninteractive 
+  dpkg --clear-selections
+  echo apt install |dpkg --set-selections
   apt-get --purge -y dselect-upgrade
   dpkg-query -Wf '${db:Status-Abbrev}\t${binary:Package}\n' | grep '^.i' | awk -F'\t' '{print $2 " install"}' | dpkg --set-selections
   rm -r /var/cache/apt
