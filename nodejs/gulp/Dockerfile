@@ -4,13 +4,11 @@
 #############################################################################
 
 
-## Set the base image to yesops/nodejs
-FROM yesops/nodejs:trusty
+## Set the base image to yesops/nodejs-buildpack
+FROM yesops/nodejs-buildpack
 
 ## File Author / Maintainer
 MAINTAINER Thiago Cangussu <cng.thg@gmail.com>
-
-## Your settings go here:
 
 ## Install gulpjs globally:
 RUN npm i -g gulp

@@ -1,7 +1,9 @@
 .DEFAULT_GOAL := all
-IMAGE := yesops/gulpjs:trusty
+
+VERSION = latest
+IMAGE = yesops/gulp
 
 all: build
 
 build:
-	docker build -t $(IMAGE) .
+	docker build -t $(IMAGE):$(VERSION) .
