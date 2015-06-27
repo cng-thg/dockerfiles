@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := all
 
 VERSION = latest
-IMAGE = yesops/gulp
+IMAGE = yesops/gulpjs
 
 all: build
 
